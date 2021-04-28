@@ -1,3 +1,4 @@
 include ':taco'
+include ':Lib'
 include ':app'
 rootProject.name = "Taco"
