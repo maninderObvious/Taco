@@ -1,4 +1,4 @@
-package com.swiggy.taco
+package com.swiggy.lib
 
 import org.junit.Test
 
