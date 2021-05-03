@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.swiggy.taco.button;
+package com.swiggy.taco.buttonExp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -42,11 +42,8 @@ import android.view.MotionEvent;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import androidx.annotation.ColorRes;
-import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.android.material.button.MaterialButton;
 import com.swiggy.taco.R;
@@ -60,7 +57,7 @@ import com.swiggy.taco.R;
  * @author Chutaux Robin
  * @version 2015.0512
  */
-public class RippleView extends AppCompatButton {
+public class RippleView extends MaterialButton {
 
     private int WIDTH;
     private int HEIGHT;

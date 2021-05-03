@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.swiggy.taco.button1.ButtonS1
-    style="@style/Theme.Swiggy"
+    <com.swiggy.taco.buttonExp.ButtonS1
         android:layout_width="match_parent"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -15,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </com.swiggy.taco.button1.ButtonS1>
+    </com.swiggy.taco.buttonExp.ButtonS1>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
