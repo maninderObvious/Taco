@@ -23,20 +23,21 @@ import com.google.android.material.theme.overlay.MaterialThemeOverlay
 import com.swiggy.taco.R
 
 
+@RequiresApi(VERSION_CODES.LOLLIPOP)
 @SuppressLint("RestrictedApi")
-open class card @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null /* attrs */, defStyleAttr: Int = R.attr.materialCardViewStyle) : CardView(MaterialThemeOverlay.wrap(context!!, attrs, defStyleAttr, DEF_STYLE_RES), attrs, defStyleAttr), Checkable, Shapeable {
+open class Card @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null /* attrs */, defStyleAttr: Int = R.attr.materialCardViewStyle) : CardView(MaterialThemeOverlay.wrap(context!!, attrs, defStyleAttr, DEF_STYLE_RES), attrs, defStyleAttr), Checkable, Shapeable {
     /** Interface definition for a callback to be invoked when the card checked state changes.  */
     interface OnCheckedChangeListener {
         /**
          * Called when the checked state of a compound button has changed.
          *
-         * @param card The Material Card View whose state has changed.
+         * @param Card The Material Card View whose state has changed.
          * @param isChecked The new checked state of MaterialCardView.
          */
-        fun onCheckedChanged(card: card?, isChecked: Boolean)
+        fun onCheckedChanged(Card: Card?, isChecked: Boolean)
     }
 
-    private val cardViewHelper: cardViewUtil
+    private val cardViewHelper: CardViewUtil
 
     /**
      * Keep track of when [CardView] is done initializing because we don't want to use the
@@ -129,7 +130,7 @@ open class card @JvmOverloads constructor(context: Context?, attrs: AttributeSet
     }
 
     val cardViewRadius: Float
-        get() = super@card.getRadius()
+        get() = super@Card.getRadius()
     /**
      * Returns the interpolation on the Shape Path of the card.
      * @see MaterialShapeDrawable.getInterpolation
@@ -322,6 +323,7 @@ open class card @JvmOverloads constructor(context: Context?, attrs: AttributeSet
      * @see .setRippleColor
      * @see .getRippleColor
      */
+    @RequiresApi(VERSION_CODES.LOLLIPOP)
     fun setRippleColorResource(@ColorRes rippleColorResourceId: Int) {
         cardViewHelper.setRippleColor(
                 AppCompatResources.getColorStateList(context, rippleColorResourceId))
@@ -485,7 +487,7 @@ open class card @JvmOverloads constructor(context: Context?, attrs: AttributeSet
                 context, attrs, R.styleable.MaterialCardView, defStyleAttr, DEF_STYLE_RES)
 
         // Loads and sets background drawable attributes.
-        cardViewHelper = cardViewUtil(this, attrs, defStyleAttr, DEF_STYLE_RES)
+        cardViewHelper = CardViewUtil(this, attrs, defStyleAttr, DEF_STYLE_RES)
         cardViewHelper.cardBackgroundColor=(super.getCardBackgroundColor())
         cardViewHelper.setUserContentPadding(
                 super.getContentPaddingLeft(),

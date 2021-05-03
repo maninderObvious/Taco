@@ -20,8 +20,8 @@ import com.google.android.material.ripple.RippleUtils
 import com.google.android.material.shape.*
 
 @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)
-internal class cardViewUtil(
-        private val materialCardView: card,
+internal class CardViewUtil(
+        private val materialCardView: Card,
         attrs: AttributeSet?,
         defStyleAttr: Int,
         @StyleRes defStyleRes: Int) {
