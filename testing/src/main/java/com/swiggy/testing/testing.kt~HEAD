@@ -1,0 +1,17 @@
+package com.swiggy.testing
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.swiggy.taco.card.Card
+
+class testing : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+<<<<<<< HEAD:testing/src/main/java/com/swiggy/testing/testing.kt
+        setContentView(R.layout.activity_testing)
+
+=======
+        setContentView(R.layout.activity_main)
+>>>>>>> master:app/src/main/java/com/swiggy/taco/MainActivity.kt
+    }
+}
